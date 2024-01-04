@@ -2,6 +2,7 @@ import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
+  NavLink,
   LiveReload,
   Meta,
   Outlet,
@@ -9,7 +10,6 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./tailwind.css";
-import { Button } from "~/components/ui/button";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -17,6 +17,28 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+  const navbar = [
+    {
+      name: "Dashboard",
+      link: "/dashboard",
+    },
+    {
+      name: "Music",
+      link: "/music",
+    },
+    {
+      name: "Mail",
+      link: "/mail",
+    },
+    {
+      name: "Tasks",
+      link: "/tasks",
+    },
+    {
+      name: "Forms",
+      link: "/forms",
+    },
+  ];
   return (
     <html lang="en">
       <head>
@@ -26,11 +48,30 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Button>Click me</Button>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+        <main className="container">
+          <nav>
+            <ul className="flex mb-4 mt-10">
+              {navbar.map((menu) => (
+                <li key={menu.name}>
+                  <NavLink
+                    className={({ isActive }) =>
+                      `flex h-7 items-center justify-center text-muted-foreground  rounded-full ${
+                        isActive && "bg-muted text-primary"
+                      } font-medium transition-colors px-4 text-center text-sm h-7  hover:text-primary`
+                    }
+                    to={menu.link}
+                  >
+                    {menu.name}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </main>
       </body>
     </html>
   );
