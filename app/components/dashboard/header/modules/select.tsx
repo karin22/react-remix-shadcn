@@ -23,7 +23,10 @@ import {
   PopoverTrigger,
 } from "~/components/ui/popover";
 
-export default function ComboboxDemo() {
+interface Props {
+  onClickAction: () => void;
+}
+export default function ComboboxDemo(props: Props) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("Alicia Koch");
 
@@ -114,18 +117,18 @@ export default function ComboboxDemo() {
           ))}
           <Separator className="my-1 -mx-1" />
 
-          <CommandItem className="mx-1 mb-1" onSelect={() => setOpen(false)}>
+          <CommandItem
+            className="mx-1 mb-1"
+            onSelect={() => {
+              props.onClickAction();
+              setOpen(false);
+            }}
+          >
             <div className=" flex items-center">
               <PlusCircledIcon className="h-5 w-5" />
               <div className="ml-2  text-sm">Create Team</div>
             </div>
           </CommandItem>
-          {/* <CommandItem className="hover:bg-accent">
-          <div className="px-2 flex items-center">
-            <PlusCircledIcon className="h-5 w-5" />
-            <div className="ml-2  text-sm">Create Team</div>
-          </div>
-          <CommandItem /> */}
         </Command>
       </PopoverContent>
     </Popover>
