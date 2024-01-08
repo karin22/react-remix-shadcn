@@ -1,71 +1,34 @@
-const IconDollar = () => {
+const Vercel = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      className="h-4 w-4 text-muted-foreground"
-    >
-      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <title>Vercel</title>
+      <path d="M24 22.525H0l12-21.05 12 21.05z" fill="currentColor" />
     </svg>
   );
 };
 
-const IconUser = () => {
+const Gmail = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      className="h-4 w-4 text-muted-foreground"
-    >
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-      <circle cx="9" cy="7" r="4"></circle>
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <title>Gmail</title>
+      <path
+        d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+        fill="currentColor"
+      />
     </svg>
   );
 };
 
-const IconCredit = () => {
+const iCloud = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      className="h-4 w-4 text-muted-foreground"
-    >
-      <rect width="20" height="14" x="2" y="5" rx="2"></rect>
-      <path d="M2 10h20"></path>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <title>iCloud</title>
+      <path
+        d="M13.762 4.29a6.51 6.51 0 0 0-5.669 3.332 3.571 3.571 0 0 0-1.558-.36 3.571 3.571 0 0 0-3.516 3A4.918 4.918 0 0 0 0 14.796a4.918 4.918 0 0 0 4.92 4.914 4.93 4.93 0 0 0 .617-.045h14.42c2.305-.272 4.041-2.258 4.043-4.589v-.009a4.594 4.594 0 0 0-3.727-4.508 6.51 6.51 0 0 0-6.511-6.27z"
+        fill="currentColor"
+      />
     </svg>
   );
 };
 
-const IconSolar = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      className="h-4 w-4 text-muted-foreground"
-    >
-      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-    </svg>
-  );
-};
-export { IconDollar, IconUser, IconCredit, IconSolar };
+export { Vercel, Gmail, iCloud };
