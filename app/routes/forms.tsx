@@ -1,7 +1,10 @@
+import { Outlet } from "@remix-run/react";
+import FormsLayout from "~/components/forms/layout";
+
 export default function Forms() {
   return (
-    <div className="text-primary">
-      <h1>Welcome to Forms</h1>
-    </div>
+    <FormsLayout>
+      <Outlet />
+    </FormsLayout>
   );
 }
