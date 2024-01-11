@@ -1,7 +1,7 @@
 import Profile from "~/components/forms/modules/profile";
 import Header from "~/components/forms/modules/header";
 
-export default function FormsIndex() {
+export default function FormsPage() {
   return (
     <div className="text-primary">
       <Header

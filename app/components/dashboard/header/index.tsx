@@ -33,7 +33,7 @@ export default function DashboardHeader() {
           <SelectDashboard onClickAction={() => setOpen(true)} />
 
           <div>
-            <ul className="flex items-center space-x-4 lg:space-x-6 mx-6">
+            <ul className="flex items-center space-x-6 mx-6">
               {menu.map((m) => (
                 <li key={m.name}>
                   <NavLink
@@ -49,7 +49,7 @@ export default function DashboardHeader() {
             </ul>
           </div>
           <div className="ml-auto flex items-center space-x-4">
-            <div className="lg:w-[300px] md:w-[100px]">
+            <div className="w-[300px]">
               <Input placeholder="search..." />
             </div>
 

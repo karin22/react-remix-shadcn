@@ -48,7 +48,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body suppressHydrationWarning={true}>
         <main className="container">
           <nav>
             <ul className="flex mb-4 mt-10">

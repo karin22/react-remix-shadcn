@@ -10,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "~/components/ui/select";
-import { Vercel, Gmail, iCloud } from "~/assets/icons";
+import { Vercel, Gmail, ICloud } from "~/assets/icons";
 
 interface Props {
   isCollapsed: boolean;
@@ -29,7 +29,7 @@ const accounts = [
   {
     label: "Alicia Koch",
     email: "alicia@me.com",
-    icon: iCloud,
+    icon: ICloud,
   },
 ];
 export default function SelectAccount({ isCollapsed }: Readonly<Props>) {
